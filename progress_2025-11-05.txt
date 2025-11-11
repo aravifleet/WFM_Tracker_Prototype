@@ -1,0 +1,19 @@
+WFM Chatbot + Activity Tracker Progress Summary (as of 2025-11-05)
+
+✅ Completed so far:
+1. Chatbot base built — prompts user at set intervals and saves responses in both .csv and .db.
+2. Configurable interval — user can set prompt frequency in minutes.
+3. SQLite integration — responses are saved persistently in a local DB (responses.db).
+4. Status tracking added — user selects status (Working / Break / Lunch).
+5. Lunch timer logic — if Lunch selected, a 30-minute timer starts and logs in DB.
+6. DB schema updated — includes timestamp, response, status, and remark.
+7. Currently testing:
+   - Break/Lunch logic (auto timer + reminder behavior after 30 minutes).
+   - Proper logging of each entry with correct timestamps and remarks.
+
+🧩 Next Planned Enhancements:
+1. If 30 mins exceeded, popup asks “Are you still on break/lunch?”
+   - If Yes → mark as Lunch Exceeded by X mins
+   - If No response → mark as Idle and continue tracking until user responds.
+2. Silent activity tracker integration → track window titles (Chrome, VS Code, etc.) and usage duration automatically in background.
+3. (Future) Admin dashboard to review employee activity (non-visible to user).
